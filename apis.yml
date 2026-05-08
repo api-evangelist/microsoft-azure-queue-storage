@@ -33,6 +33,8 @@ apis:
       - Queue
       - Storage
     properties:
+      - url: openapi/microsoft-azure-queue-storage-openapi.yml
+        type: OpenAPI
       - type: Documentation
         url: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
       - type: Authentication
