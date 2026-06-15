@@ -1,0 +1,167 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Azure Queue Storage REST API",
+    "version": "2024-05-04"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Queues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Azure Queue Storage REST API List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{account}.queue.core.windows.net/",
+            "params": [
+              {
+                "name": "comp",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lists queues in the account."
+        },
+        {
+          "info": {
+            "name": "Azure Queue Storage REST API Get properties",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{account}.queue.core.windows.net/:container",
+            "params": [
+              {
+                "name": "container",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns the properties of the queue."
+        },
+        {
+          "info": {
+            "name": "Azure Queue Storage REST API Create",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{account}.queue.core.windows.net/:container",
+            "params": [
+              {
+                "name": "container",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Creates a new queue."
+        },
+        {
+          "info": {
+            "name": "Azure Queue Storage REST API Delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{account}.queue.core.windows.net/:container",
+            "params": [
+              {
+                "name": "container",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes the queue."
+        },
+        {
+          "info": {
+            "name": "Azure Queue Storage REST API Get item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{account}.queue.core.windows.net/:container/:path",
+            "params": [
+              {
+                "name": "container",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a resource at the path."
+        },
+        {
+          "info": {
+            "name": "Azure Queue Storage REST API Put item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{account}.queue.core.windows.net/:container/:path",
+            "params": [
+              {
+                "name": "container",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Creates or updates a resource at the path."
+        },
+        {
+          "info": {
+            "name": "Azure Queue Storage REST API Delete item",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{account}.queue.core.windows.net/:container/:path",
+            "params": [
+              {
+                "name": "container",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "path",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a resource at the path."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

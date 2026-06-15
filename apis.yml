@@ -1,9 +1,10 @@
 aid: microsoft-azure-queue-storage
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-queue-storage/refs/heads/main/apis.yml
 name: Azure Queue Storage
-description: Azure Queue Storage is a Microsoft cloud service for storing large numbers of messages, enabling decoupled and
-  asynchronous communication between application components. Messages can be accessed via authenticated HTTP/HTTPS calls and
-  support visibility timeouts, peeking, and metadata for reliable processing.
+description: >-
+  Azure Queue Storage is a Microsoft cloud service for storing large numbers of messages, enabling decoupled and
+  asynchronous communication between application components. Messages can be accessed via authenticated HTTP/HTTPS calls
+  and support visibility timeouts, peeking, and metadata for reliable processing.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Asynchronous Processing
@@ -17,28 +18,27 @@ specificationVersion: '0.20'
 apis:
   - aid: microsoft-azure-queue-storage:rest-api
     name: Azure Queue Storage REST API
-    description: Azure Queue Storage REST API provides cloud-based message queuing for decoupling application components. It
-      supports creating queues, adding messages, peeking at messages, dequeuing messages with visibility timeouts, and managing
-      queue metadata for asynchronous processing.
+    description: >-
+      Azure Queue Storage REST API provides cloud-based message queuing for decoupling application components. It
+      supports creating queues, adding messages, peeking at messages, dequeuing messages with visibility timeouts, and
+      managing queue metadata for asynchronous processing.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
     baseURL: https://{account}.queue.core.windows.net/
     tags:
-    - Asynchronous Processing
-    - Messaging
-    - Queue
-    - Storage
+      - Asynchronous Processing
+      - Messaging
+      - Queue
+      - Storage
     properties:
-    - url: openapi/microsoft-azure-queue-storage-openapi.yml
-      type: OpenAPI
-    - type: Documentation
-      url: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
-    - type: Authentication
-      url: https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-    - type: Versioning
-      url: https://learn.microsoft.com/en-us/rest/api/storageservices/versioning-for-the-azure-storage-services
-    - type: NaftikoCapability
-      url: capabilities/microsoft-azure-queue-storage-queues.yaml
+      - url: openapi/microsoft-azure-queue-storage-openapi.yml
+        type: OpenAPI
+      - type: Documentation
+        url: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
+      - type: Authentication
+        url: https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
+      - type: Versioning
+        url: https://learn.microsoft.com/en-us/rest/api/storageservices/versioning-for-the-azure-storage-services
 common:
   - type: GitHubOrganization
     url: https://github.com/Azure
