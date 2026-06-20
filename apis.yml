@@ -5,7 +5,7 @@ description: >-
   Azure Queue Storage is a Microsoft cloud service for storing large numbers of messages, enabling decoupled and
   asynchronous communication between application components. Messages can be accessed via authenticated HTTP/HTTPS calls
   and support visibility timeouts, peeking, and metadata for reliable processing.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Asynchronous Processing
   - Cloud Storage
@@ -22,7 +22,7 @@ apis:
       Azure Queue Storage REST API provides cloud-based message queuing for decoupling application components. It
       supports creating queues, adding messages, peeking at messages, dequeuing messages with visibility timeouts, and
       managing queue metadata for asynchronous processing.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
     baseURL: https://{account}.queue.core.windows.net/
     tags:
