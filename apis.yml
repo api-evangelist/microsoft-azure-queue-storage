@@ -40,6 +40,10 @@ apis:
       - type: Versioning
         url: https://learn.microsoft.com/en-us/rest/api/storageservices/versioning-for-the-azure-storage-services
 common:
+  - type: DomainSecurity
+    url: security/microsoft-azure-queue-storage-domain-security.yml
+  - type: Authentication
+    url: authentication/microsoft-azure-queue-storage-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/Azure
   - type: Portal
