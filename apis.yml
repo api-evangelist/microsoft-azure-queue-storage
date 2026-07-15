@@ -40,6 +40,8 @@ apis:
       - type: Versioning
         url: https://learn.microsoft.com/en-us/rest/api/storageservices/versioning-for-the-azure-storage-services
 common:
+  - type: AgenticAccess
+    url: agentic-access/microsoft-azure-queue-storage-agentic-access.yml
   - type: DomainSecurity
     url: security/microsoft-azure-queue-storage-domain-security.yml
   - type: Authentication
