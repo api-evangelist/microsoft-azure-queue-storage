@@ -1,26 +1,20 @@
 openapi: 3.1.0
 info:
-  title: Azure Queue Storage REST API
-  description: Azure Queue Storage REST API supports messaging operations including queue management and
-    message enqueue, peek, dequeue, and delete.
+  title: Azure Queue Storage REST Queues API
+  description: Azure Queue Storage REST API supports messaging operations including queue management and message enqueue, peek, dequeue, and delete.
   version: '2024-05-04'
-externalDocs:
-  description: Azure Queue Storage REST API Documentation
-  url: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
 servers:
 - url: https://{account}.queue.core.windows.net
   variables:
     account:
       default: myaccount
       description: Storage account name
-tags:
-- name: Service
-  description: Account-level operations
-- name: Queues
-  description: Queues operations
 security:
 - sharedKey: []
 - sasToken: []
+tags:
+- name: Queues
+  description: Queues operations
 paths:
   /:
     get:
@@ -135,5 +129,8 @@ components:
       in: query
       name: sig
       description: Shared Access Signature token
+externalDocs:
+  description: Azure Queue Storage REST API Documentation
+  url: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
 x-generated-from: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
 x-generated-by: claude-crawl-2026-05-08
