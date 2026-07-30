@@ -5,7 +5,20 @@ description: >-
   Azure Queue Storage is a Microsoft cloud service for storing large numbers of messages, enabling decoupled and
   asynchronous communication between application components. Messages can be accessed via authenticated HTTP/HTTPS calls
   and support visibility timeouts, peeking, and metadata for reliable processing.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-azure-queue-storage.png
 tags:
   - Asynchronous Processing
   - Cloud Storage
@@ -16,29 +29,24 @@ created: '2026-03-13'
 modified: '2026-05-19'
 specificationVersion: '0.20'
 apis:
-  - aid: microsoft-azure-queue-storage:rest-api
-    name: Azure Queue Storage REST API
-    description: >-
-      Azure Queue Storage REST API provides cloud-based message queuing for decoupling application components. It
-      supports creating queues, adding messages, peeking at messages, dequeuing messages with visibility timeouts, and
-      managing queue metadata for asynchronous processing.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
-    baseURL: https://{account}.queue.core.windows.net/
-    tags:
-      - Asynchronous Processing
-      - Messaging
-      - Queue
-      - Storage
-    properties:
-      - url: openapi/microsoft-azure-queue-storage-openapi.yml
-        type: OpenAPI
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
-      - type: Authentication
-        url: https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
-      - type: Versioning
-        url: https://learn.microsoft.com/en-us/rest/api/storageservices/versioning-for-the-azure-storage-services
+- aid: microsoft-azure-queue-storage:microsoft-azure-queue-storage-queues-api
+  name: Azure Queue Storage Queues API
+  description: Queues operations
+  humanURL: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
+  baseURL: https://{account}.queue.core.windows.net/
+  tags:
+  - Queues
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-azure-queue-storage-queues-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
+  - type: Authentication
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-requests-to-azure-storage
+  - type: Versioning
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/storageservices/versioning-for-the-azure-storage-services
 common:
   - type: AgenticAccess
     url: agentic-access/microsoft-azure-queue-storage-agentic-access.yml
