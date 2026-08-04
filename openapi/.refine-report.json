@@ -1,0 +1,14 @@
+{
+  "provider": "microsoft-azure-queue-storage",
+  "sources": [
+    "microsoft-azure-queue-storage-queues-api-openapi.yml"
+  ],
+  "outputs": [
+    "microsoft-azure-queue-storage-queues-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

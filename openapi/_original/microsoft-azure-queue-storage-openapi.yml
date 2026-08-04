@@ -1,0 +1,139 @@
+openapi: 3.1.0
+info:
+  title: Azure Queue Storage REST API
+  description: Azure Queue Storage REST API supports messaging operations including queue management and
+    message enqueue, peek, dequeue, and delete.
+  version: '2024-05-04'
+externalDocs:
+  description: Azure Queue Storage REST API Documentation
+  url: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
+servers:
+- url: https://{account}.queue.core.windows.net
+  variables:
+    account:
+      default: myaccount
+      description: Storage account name
+tags:
+- name: Service
+  description: Account-level operations
+- name: Queues
+  description: Queues operations
+security:
+- sharedKey: []
+- sasToken: []
+paths:
+  /:
+    get:
+      operationId: listContainers
+      summary: Azure Queue Storage REST API List
+      description: Lists queues in the account.
+      tags:
+      - Queues
+      parameters:
+      - name: comp
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - list
+      responses:
+        '200':
+          description: Queues listing
+          content:
+            application/xml:
+              schema:
+                type: object
+  /{container}:
+    parameters:
+    - name: container
+      in: path
+      required: true
+      schema:
+        type: string
+    put:
+      operationId: createContainer
+      summary: Azure Queue Storage REST API Create
+      description: Creates a new queue.
+      tags:
+      - Queues
+      responses:
+        '201':
+          description: Created
+    get:
+      operationId: getContainerProperties
+      summary: Azure Queue Storage REST API Get properties
+      description: Returns the properties of the queue.
+      tags:
+      - Queues
+      responses:
+        '200':
+          description: Properties
+    delete:
+      operationId: deleteContainer
+      summary: Azure Queue Storage REST API Delete
+      description: Deletes the queue.
+      tags:
+      - Queues
+      responses:
+        '202':
+          description: Deletion accepted
+  /{container}/{path}:
+    parameters:
+    - name: container
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: path
+      in: path
+      required: true
+      schema:
+        type: string
+    put:
+      operationId: putItem
+      summary: Azure Queue Storage REST API Put item
+      description: Creates or updates a resource at the path.
+      tags:
+      - Queues
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '201':
+          description: Created
+    get:
+      operationId: getItem
+      summary: Azure Queue Storage REST API Get item
+      description: Retrieves a resource at the path.
+      tags:
+      - Queues
+      responses:
+        '200':
+          description: OK
+    delete:
+      operationId: deleteItem
+      summary: Azure Queue Storage REST API Delete item
+      description: Deletes a resource at the path.
+      tags:
+      - Queues
+      responses:
+        '202':
+          description: Deletion accepted
+components:
+  securitySchemes:
+    sharedKey:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Shared Key authentication
+    sasToken:
+      type: apiKey
+      in: query
+      name: sig
+      description: Shared Access Signature token
+x-generated-from: https://learn.microsoft.com/en-us/rest/api/storageservices/queue-service-rest-api
+x-generated-by: claude-crawl-2026-05-08
