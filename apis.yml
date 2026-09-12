@@ -1,5 +1,5 @@
 aid: microsoft-azure-queue-storage
-url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-queue-storage/refs/heads/main/apis.yml
+url: https://learn.microsoft.com/en-us/azure/storage/queues/
 name: Azure Queue Storage
 description: >-
   Azure Queue Storage is a Microsoft cloud service for storing large numbers of messages, enabling decoupled and
