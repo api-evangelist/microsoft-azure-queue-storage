@@ -61,6 +61,8 @@ apis:
     url: >-
       https://learn.microsoft.com/en-us/rest/api/storageservices/versioning-for-the-azure-storage-services
 common:
+  - type: Website
+    url: https://www.microsoft.com/
   - type: AgenticAccess
     url: agentic-access/microsoft-azure-queue-storage-agentic-access.yml
   - type: DomainSecurity
@@ -92,3 +94,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: microsoft-azure
+x-relationship: product
