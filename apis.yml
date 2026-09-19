@@ -36,6 +36,12 @@ tags:
   - Asynchronous Processing
   - Cloud Storage
   - Messaging
+  - Queues
+  - Storage
+tags_raw:
+  - Asynchronous Processing
+  - Cloud Storage
+  - Messaging
   - Queue
   - Storage
 created: '2026-03-13'
